@@ -1,29 +1,31 @@
-<p id="notice"><%= notice %></p>
+<h1>閲覧</h1>
 
 <p>
-  <strong>Name:</strong>
+  <strong>物件名:</strong>
   <%= @rent.name %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong>賃料:</strong>
   <%= @rent.price %>
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong>住所:</strong>
   <%= @rent.address %>
 </p>
 
 <p>
-  <strong>Age:</strong>
+  <strong>築年数:</strong>
   <%= @rent.age %>
 </p>
 
 <p>
-  <strong>Remarks:</strong>
+  <strong>備考:</strong>
   <%= @rent.remarks %>
 </p>
 
-<%= link_to 'Edit', edit_rent_path(@rent) %> |
-<%= link_to 'Back', rents_path %>
+<tr><td><hr width="1000"></td></tr>
+
+<%= link_to '編集', edit_rent_path(@rent) %> |
+<%= link_to '一覧', rents_path %>

@@ -12,31 +12,33 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <label for="name">物件名</label>
+    <p><%= form.text_field :name %></p>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price %>
+    <label for="price">賃料</label>
+    <p><%= form.text_field :price %>円</p>
   </div>
 
   <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
+    <label for="address">住所</label>
+    <p><%= form.text_field :address %></p>
   </div>
 
   <div class="field">
-    <%= form.label :age %>
-    <%= form.text_field :age %>
+    <label for="age">築年数</label>
+    <p><%= form.text_field :age %>年</p>
   </div>
 
   <div class="field">
-    <%= form.label :remarks %>
-    <%= form.text_area :remarks %>
+    <label for="remarks">備考</label>
+    <p><%= form.text_area :remarks %></p>
   </div>
+
+  <tr><td><hr width="1000"></td></tr>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "登録" %>
   </div>
 <% end %>
