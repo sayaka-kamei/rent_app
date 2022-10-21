@@ -20,6 +20,7 @@ class RentsController < ApplicationController
 
   # GET /rents/1/edit
   def edit
+    @rent.stations.new
   end
 
   # POST /rents or /rents.json
