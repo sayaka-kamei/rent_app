@@ -8,11 +8,14 @@ class RentsController < ApplicationController
 
   # GET /rents/1 or /rents/1.json
   def show
+    @stations = @rent.stations
   end
 
   # GET /rents/new
   def new
     @rent = Rent.new
+    @rent.stations.new
+    @rent.stations.new
   end
 
   # GET /rents/1/edit
@@ -57,13 +60,13 @@ class RentsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_rent
-      @rent = Rent.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_rent
+    @rent = Rent.find(params[:id])
+  end
 
-    # Only allow a list of trusted parameters through.
-    def rent_params
-      params.require(:rent).permit(:name, :price, :address, :age, :remarks)
-    end
+  # Only allow a list of trusted parameters through.
+  def rent_params
+    params.require(:rent).permit(:id, :name, :price, :address, :age, :remarks, stations_attributes: [:id, :route, :station, :time])
+  end
 end

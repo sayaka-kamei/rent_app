@@ -27,5 +27,20 @@
 
 <tr><td><hr width="1000"></td></tr>
 
-<%= link_to '編集', edit_rent_path(@rent) %> |
+<% n = 0 %>
+<% @stations.each do | station | %>
+<h3>最寄り駅<%= n += 1 %></h3>
+
+  <p>路線名:
+  <%= station.route %></p>
+
+  <p>駅名:
+  <%= station.station %></p>
+
+  <p>徒歩分数:
+  <%= station.time %></p>
+
+<% end %>
+
+<%= link_to '編集', edit_rent_path %> |
 <%= link_to '一覧', rents_path %>
